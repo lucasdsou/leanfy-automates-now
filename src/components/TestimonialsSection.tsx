@@ -60,10 +60,7 @@ const TestimonialsSection = () => {
       <div className="container mx-auto max-w-7xl">
         <div className="text-center mb-16 animate-fade-in">
           <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-6">
-            Casos{" "}
-            <span className="text-transparent bg-clip-text bg-gradient-primary">
-              reais
-            </span>
+            Projetos
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             Resultados concretos de empresas que eliminaram gargalos e ganharam eficiência real

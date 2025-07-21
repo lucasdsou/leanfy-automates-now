@@ -29,14 +29,23 @@ const PainPointsSection = () => {
       <div className="container mx-auto max-w-7xl">
         <div className="text-center mb-16 animate-fade-in">
           <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-6">
-            Problemas que{" "}
-            <span className="text-transparent bg-clip-text bg-gradient-primary">
-              resolvemos
+            Soluções
+            <span className="text-transparent bg-clip-text bg-gradient-primary ml-2">
+              estratégicas
             </span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             Identificamos e eliminamos os gargalos que impedem sua operação de escalar de forma eficiente
           </p>
+        </div>
+
+        {/* Bloco Reconhece algum desses problemas? */}
+        <div className="text-center mb-12 animate-fade-in">
+          <div className="bg-gradient-subtle p-8 rounded-2xl border border-border">
+            <h3 className="text-2xl font-bold text-foreground mb-0">
+              Reconhece algum desses problemas?
+            </h3>
+          </div>
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8">
@@ -68,25 +77,17 @@ const PainPointsSection = () => {
           })}
         </div>
 
-        {/* CTA Section */}
+        {/* Botão CTA */}
         <div className="text-center mt-16 animate-fade-in">
-          <div className="bg-gradient-subtle p-8 rounded-2xl border border-border">
-            <h3 className="text-2xl font-bold text-foreground mb-4">
-              Reconhece algum desses problemas?
-            </h3>
-            <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
-              Não precisa conviver com eles. Vamos mostrar como automatizar seus processos de forma inteligente.
-            </p>
-            <button 
-              onClick={() => {
-                const contactSection = document.getElementById('contact');
-                contactSection?.scrollIntoView({ behavior: 'smooth' });
-              }}
-              className="bg-gradient-action text-action-foreground px-8 py-3 rounded-lg font-semibold hover:shadow-medium transform hover:scale-105 transition-all duration-300"
-            >
-              Quero uma análise gratuita
-            </button>
-          </div>
+          <button 
+            onClick={() => {
+              const contactSection = document.getElementById('contact');
+              contactSection?.scrollIntoView({ behavior: 'smooth' });
+            }}
+            className="bg-gradient-action text-action-foreground px-8 py-3 rounded-lg font-semibold hover:shadow-medium transform hover:scale-105 transition-all duration-300"
+          >
+            Quero uma análise gratuita
+          </button>
         </div>
       </div>
     </section>

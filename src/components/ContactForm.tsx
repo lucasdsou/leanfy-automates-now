@@ -199,7 +199,7 @@ const ContactForm = () => {
 
       <p className="text-xs text-muted-foreground text-center">
         Ao enviar, você concorda com nossa{" "}
-        <a href="#" className="text-primary hover:underline">
+        <a href="/privacy-policy" className="text-primary hover:underline" target="_blank" rel="noopener noreferrer">
           Política de Privacidade
         </a>{" "}
         e consente o uso dos dados conforme a LGPD.

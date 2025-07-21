@@ -43,20 +43,11 @@ const HeroSection = () => {
                 Quero falar com um especialista
                 <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
               </Button>
-              
-              <Button 
-                variant="hero" 
-                size="xl" 
-                onClick={scrollToCases}
-                className="group"
-              >
-                <Play className="mr-2 h-5 w-5" />
-                Ver exemplo real
-              </Button>
+              {/* Removido o botão 'Ver exemplo real' */}
             </div>
 
             {/* Métricas de credibilidade */}
-            <div className="grid grid-cols-3 gap-8 pt-8 border-t border-border">
+            <div className="grid grid-cols-3 gap-8 pt-8">
               <div className="text-center">
                 <div className="text-2xl font-bold text-primary">250h+</div>
                 <div className="text-sm text-muted-foreground">economizadas/mês</div>

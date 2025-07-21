@@ -1,4 +1,5 @@
 import { Users, Target, Award, Lightbulb } from "lucide-react";
+import quemSomosImg from "@/assets/quem-somos.png";
 
 const AboutSection = () => {
   const teamValues = [
@@ -25,11 +26,11 @@ const AboutSection = () => {
   ];
 
   return (
-    <section className="py-20 px-4 sm:px-6 lg:px-8 bg-background">
+    <section className="min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 bg-background">
       <div className="container mx-auto max-w-7xl">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
-          {/* Conteúdo */}
-          <div className="animate-fade-in">
+          {/* Conteúdo à esquerda */}
+          <div className="animate-fade-in text-left w-full">
             <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-6">
               Quem somos e{" "}
               <span className="text-transparent bg-clip-text bg-gradient-primary">
@@ -37,21 +38,15 @@ const AboutSection = () => {
               </span>
             </h2>
             
-            <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
-              Pequena no tamanho, grande na entrega. A Leanfy nasce da fusão de{" "}
-              <strong className="text-foreground">Lean</strong> (eficiência, corte de desperdícios) com{" "}
-              <strong className="text-foreground">Fy</strong> (transformação em tempo real).
-            </p>
-
             <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
               Nosso propósito é tornar processos mais ágeis, eficientes e inteligentes, 
               ajudando empresas a ganhar tempo, clareza e produtividade por meio de 
               automação genuína, não de "soluções mágicas".
             </p>
 
-            <div className="bg-gradient-subtle p-6 rounded-2xl border border-border mb-8">
+            <div className="bg-gradient-subtle p-6 rounded-2xl border border-border mb-8 inline-block text-left mx-auto">
               <h3 className="text-lg font-semibold text-foreground mb-3">
-                Nossa metodologia
+                Nosso objetivo
               </h3>
               <p className="text-muted-foreground">
                 <strong className="text-foreground">Foco, honestidade e automação real</strong> — 
@@ -60,13 +55,13 @@ const AboutSection = () => {
               </p>
             </div>
 
-            <div className="grid sm:grid-cols-2 gap-6">
+            <div className="flex flex-col items-center gap-4">
               {teamValues.map((value, index) => {
                 const IconComponent = value.icon;
                 return (
                   <div 
                     key={index}
-                    className="flex items-start space-x-3 animate-slide-up"
+                    className="flex items-start space-x-3 animate-slide-up max-w-md w-full mx-auto"
                     style={{ animationDelay: `${index * 0.1}s` }}
                   >
                     <div className="w-8 h-8 bg-gradient-primary rounded-lg flex items-center justify-center flex-shrink-0 mt-1">
@@ -85,61 +80,13 @@ const AboutSection = () => {
               })}
             </div>
           </div>
-
-          {/* Team Visual */}
-          <div className="animate-slide-up">
-            <div className="bg-card rounded-3xl p-8 shadow-medium border border-border relative overflow-hidden">
-              {/* Placeholder para fotos reais da equipe */}
-              <div className="text-center mb-8">
-                <h3 className="text-xl font-semibold text-foreground mb-4">
-                  Nossa equipe
-                </h3>
-                <p className="text-muted-foreground mb-6">
-                  Especialistas em automação, desenvolvimento e otimização de processos
-                </p>
-              </div>
-
-              {/* Grid de membros da equipe (placeholder) */}
-              <div className="grid grid-cols-2 gap-6 mb-8">
-                {[
-                  { name: "Ana Silva", role: "Arquiteta de Automação", initial: "A" },
-                  { name: "Carlos Santos", role: "Desenvolvedor Senior", initial: "C" },
-                  { name: "Marina Costa", role: "Analista de Processos", initial: "M" },
-                  { name: "Rafael Lima", role: "Consultor de Eficiência", initial: "R" }
-                ].map((member, index) => (
-                  <div key={index} className="text-center">
-                    <div className="w-16 h-16 bg-gradient-primary rounded-full flex items-center justify-center text-white text-xl font-bold mx-auto mb-3">
-                      {member.initial}
-                    </div>
-                    <div className="text-sm font-medium text-foreground">
-                      {member.name}
-                    </div>
-                    <div className="text-xs text-muted-foreground">
-                      {member.role}
-                    </div>
-                  </div>
-                ))}
-              </div>
-
-              {/* Estatísticas da equipe */}
-              <div className="grid grid-cols-3 gap-4 pt-6 border-t border-border">
-                <div className="text-center">
-                  <div className="text-lg font-bold text-primary">4+</div>
-                  <div className="text-xs text-muted-foreground">anos de experiência</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-lg font-bold text-primary">50+</div>
-                  <div className="text-xs text-muted-foreground">projetos entregues</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-lg font-bold text-primary">100%</div>
-                  <div className="text-xs text-muted-foreground">clientes satisfeitos</div>
-                </div>
-              </div>
-
-              {/* Elemento decorativo */}
-              <div className="absolute -top-6 -right-6 w-24 h-24 bg-gradient-primary opacity-10 rounded-full animate-float"></div>
-            </div>
+          {/* Imagem à direita */}
+          <div className="flex justify-center items-center w-full">
+            <img 
+              src={quemSomosImg}
+              alt="Equipe Leanfy"
+              className="aspect-[3/4] object-cover rounded-2xl shadow-glow w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-xs xl:max-w-xs"
+            />
           </div>
         </div>
       </div>

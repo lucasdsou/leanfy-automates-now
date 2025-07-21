@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import leanfyLogo from "@/assets/leanfy-logo.png";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   const scrollToContact = () => {
@@ -12,31 +13,34 @@ const Header = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
-            <img 
-              src={leanfyLogo} 
-              alt="Leanfy - Automação real sem enrolação" 
-              className="h-8 w-auto"
-            />
+            <a href="#" onClick={e => { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }); }}>
+              <img 
+                src={leanfyLogo} 
+                alt="Leanfy - Automação real sem enrolação" 
+                className="h-12 w-auto"
+              />
+            </a>
           </div>
           
           <nav className="hidden md:flex items-center space-x-8">
             <a 
+              href="#" 
+              className="text-foreground hover:text-primary transition-colors duration-300 font-medium"
+              onClick={e => { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }); }}
+            >
+              Início
+            </a>
+            <a 
               href="#dores" 
               className="text-foreground hover:text-primary transition-colors duration-300 font-medium"
             >
-              Problemas que resolvemos
+              Soluções estratégicas
             </a>
             <a 
               href="#como-atuamos" 
               className="text-foreground hover:text-primary transition-colors duration-300 font-medium"
             >
-              Como atuamos
-            </a>
-            <a 
-              href="#casos" 
-              className="text-foreground hover:text-primary transition-colors duration-300 font-medium"
-            >
-              Casos reais
+              Metodologia
             </a>
             <Button 
               variant="action" 

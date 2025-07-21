@@ -30,10 +30,7 @@ const HowWeWorkSection = () => {
       <div className="container mx-auto max-w-7xl">
         <div className="text-center mb-16 animate-fade-in">
           <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-6">
-            Como{" "}
-            <span className="text-transparent bg-clip-text bg-gradient-primary">
-              atuamos
-            </span>
+            Metodologia
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             Metodologia transparente em 3 passos para transformar sua operação sem pressa e sem surpresas
@@ -114,10 +111,6 @@ const HowWeWorkSection = () => {
           })}
         </div>
 
-        {/* Timeline conectora */}
-        <div className="hidden lg:block absolute left-1/2 transform -translate-x-1/2 top-0 bottom-0">
-          <div className="w-px bg-gradient-to-b from-primary/20 via-primary/40 to-primary/20 h-full"></div>
-        </div>
       </div>
     </section>
   );

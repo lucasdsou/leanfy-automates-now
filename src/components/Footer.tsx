@@ -103,12 +103,6 @@ const Footer = () => {
             >
               Política de Privacidade
             </a>
-            <a 
-              href="#" 
-              className="text-gray-300 hover:text-white text-sm transition-colors"
-            >
-              Termos de Uso
-            </a>
             <button
               onClick={scrollToTop}
               className="w-10 h-10 bg-white/10 hover:bg-primary rounded-lg flex items-center justify-center transition-all duration-300 hover:scale-110"

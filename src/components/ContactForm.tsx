@@ -31,25 +31,23 @@ const ContactForm = () => {
 
     setIsSubmitting(true);
 
-    // Simular envio do formulário
     try {
-      await new Promise(resolve => setTimeout(resolve, 2000));
-      
-      setIsSubmitted(true);
-      toast({
-        title: "Formulário enviado com sucesso!",
-        description: "Nossa equipe entrará em contato em até 24 horas.",
+      const response = await fetch('http://localhost:3001/api/send-email', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData),
       });
-      
-      // Reset form
-      setFormData({
-        name: "",
-        company: "",
-        role: "",
-        phone: "",
-        challenge: ""
-      });
-      
+
+      if (response.ok) {
+        setIsSubmitted(true);
+        toast({
+          title: "Formulário enviado com sucesso!",
+          description: "Nossa equipe entrará em contato em até 24 horas.",
+        });
+        setFormData({ name: "", company: "", role: "", phone: "", challenge: "" });
+      } else {
+        throw new Error('Erro ao enviar');
+      }
     } catch (error) {
       toast({
         title: "Erro ao enviar",

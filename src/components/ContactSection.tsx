@@ -1,5 +1,6 @@
 import ContactForm from "./ContactForm";
 import { MessageCircle, Mail, Linkedin } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 const ContactSection = () => {
   return (
@@ -19,8 +20,27 @@ const ContactSection = () => {
         </div>
 
         <div className="flex justify-center items-center w-full">
-          <div className="bg-card rounded-3xl p-8 md:p-10 shadow-medium border border-border max-w-3xl w-full">
-            <ContactForm />
+          <div className="bg-card rounded-3xl p-8 md:p-10 shadow-medium border border-border max-w-3xl w-full text-center">
+            <div className="flex flex-col items-center justify-center gap-6">
+              <a
+                href="https://wa.me/554130739144?text=Ol%C3%A1!%20Eu%20vim%20pelo%20site.%20Gostaria%20de%20uma%20analise%20dos%20meus%20processos!"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full"
+              >
+                <Button variant="cta" size="lg" className="w-full">
+                  <MessageCircle className="mr-2" /> WhatsApp: (41) 3073-9144
+                </Button>
+              </a>
+              <a
+                href="mailto:contato@leanfy.com.br"
+                className="w-full"
+              >
+                <Button variant="cta" size="lg" className="w-full">
+                  <Mail className="mr-2" /> E-mail: contato@leanfy.com.br
+                </Button>
+              </a>
+            </div>
           </div>
         </div>
       </div>
